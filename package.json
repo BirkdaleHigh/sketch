@@ -1,0 +1,17 @@
+{
+  "name": "sketch",
+  "version": "1.0.0",
+  "description": "Simple file to host different processing sketches",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Mr J Bennett <github@birkdalehigh.co.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
