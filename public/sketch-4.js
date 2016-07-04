@@ -8,11 +8,15 @@ var countdown = 10000 // milliseconds to count down.
 function setup() {
   canvas = createCanvas(400,400)
   colorMode(HSB, 100)
+  textSize(96)
+  textAlign(CENTER, CENTER)
 }
 
 function draw() {
   var time = x = Math.round((countdown - millis())/1000)  
   background(time, 100, 100)
-  fill(0, 0, 77)
+  fill(0, 0, 0)
+  strokeWeight(10)
+  stroke(0,0,100)
   text(time, width / 2 , height / 2)
 }
