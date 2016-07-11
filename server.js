@@ -3,7 +3,8 @@ var app = express()
 var http = require('http').Server(app)
 var os = require('os')
 var handlebars = require('express-handlebars')
-var port  = process.env.PORT || 3000
+var port  = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000
+var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
 app.use(express.static(__dirname + '/public'))
 
