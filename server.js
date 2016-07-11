@@ -3,6 +3,7 @@ var app = express()
 var http = require('http').Server(app)
 var os = require('os')
 var handlebars = require('express-handlebars')
+var port  = process.env.NODE_PORT || 3000
 
 app.use(express.static(__dirname + '/public'))
 
@@ -22,8 +23,6 @@ app.get('/sketch/:id', function (req, res, next) {
   console.log('--------------')
   res.render('sketch', {file: req.params.id})
 })
-
-var port  = process.env.NODE_PORT || 3000
 
 http.listen(port, '0.0.0.0', function () {
   console.log(`listening on ${ os.hostname() } at: ${http.address().port}`)
