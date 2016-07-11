@@ -3,7 +3,7 @@ var app = express()
 var http = require('http').Server(app)
 var os = require('os')
 var handlebars = require('express-handlebars')
-var port  = process.env.NODE_PORT || 3000
+var port  = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/public'))
 
