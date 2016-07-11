@@ -25,6 +25,6 @@ app.get('/sketch/:id', function (req, res, next) {
   res.render('sketch', {file: req.params.id})
 })
 
-http.listen(port, '0.0.0.0', function () {
+http.listen(port, ip, function () {
   console.log(`listening on ${ os.hostname() } at: ${http.address().port}`)
 })
