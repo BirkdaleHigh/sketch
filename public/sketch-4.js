@@ -1,5 +1,5 @@
-//title: Sketch 4: Countdown by Student
-console.log('sketch-4')
+//title: Sketch 3: Countdown
+console.log('sketch-3')
 
 var canvas
 var countdown = 150000 // milliseconds to count down.
