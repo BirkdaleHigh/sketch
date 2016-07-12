@@ -51,8 +51,17 @@ function draw() {
     }
   }
 
-  list.forEach(function(c){
-    ellipse(c.x, c.y ,5, 5)
+  list.forEach(function(c, i, a){
+    if(i === (a.length -1)){ // Only paint a boarder around the head of the snake.
+      stroke(pallet.dark)
+    } else {
+      noStroke()
+    }
+    // Set the opacity relative to the position in the array
+    pallet.green._array[3] = map(i, 0, a.length, .2, 1)
+    fill(pallet.green)
+
+    ellipse(c.x, c.y ,15, 15)
   })
 
   last.x = circle.x
