@@ -1,3 +1,6 @@
+//title: Sketch 7: keyboard controlled drawing by Student
+console.log('sketch-7')
+
 var x = 100;
 var y = 100;
 var barWidth = 0.5;

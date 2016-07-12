@@ -1,3 +1,6 @@
+//title: Sketch 8: Beginnings of a snake game.
+console.log('sketch-8')
+
 var x = 100;
 var y = 100;
 var barWidth = 0.5;
