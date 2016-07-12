@@ -3,10 +3,6 @@ console.log('sketch-8')
 
 var x = 100;
 var y = 100;
-var barWidth = 0.5;
-var barlength = 0.5;
-var earlybar = 0;
-var col = 10
 
 var bg
 var list = []
@@ -17,7 +13,6 @@ function setup() {
   createCanvas(512, 512);
   
   background(bg)
-  fullscreen(true)
 }
 
 var last = {'x': 0, 'y': 0}
@@ -44,7 +39,6 @@ function draw() {
 
   var circle = {'x': x, 'y': y}
   if( (last.x !== x) || (last.y !== y) ){
-    console.log('last.x: ' + last.x + ' Circle.x: ' + circle.x + 'last.y: ' + last.y + ' Circle.y: ' + circle.y)
     if(list.length < 40){
       list.push(circle)
     } else {
