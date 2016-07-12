@@ -4,21 +4,25 @@ console.log('sketch-8')
 var x = 100;
 var y = 100;
 
-var bg
+var pallet = {}
 var list = []
 
 function setup() {
-  bg = color(20,90,90)
-  colorMode(HSB, 95)
+  // Colours
+  colorMode(HSL) // HSL is easier to use, get them with the browsers colour picker.
+  pallet.dark  = color(23,22,27)
+  pallet.dust  = color(58,78,80)
+  pallet.green = color(159,39,55)
+
   createCanvas(512, 512);
   
-  background(bg)
+  background(pallet.dust)
 }
 
 var last = {'x': 0, 'y': 0}
 
 function draw() {
-  background(bg)
+  background(pallet.dust)
   fill(255, 0, 0);
   
   if (keyIsDown(LEFT_ARROW)){
