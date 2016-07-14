@@ -25,19 +25,19 @@ function draw() {
   background(pallet.dust)
   fill(255, 0, 0);
   
-  if (keyIsDown(LEFT_ARROW)){
+  if (keyIsDown(LEFT_ARROW) && x > 0){
     x -= 5
   }
 
-  if (keyIsDown(RIGHT_ARROW)){
+  if (keyIsDown(RIGHT_ARROW) && x < width){
     x += 5
   }
 
-  if (keyIsDown(UP_ARROW)){
+  if (keyIsDown(UP_ARROW) && y > 0){
     y -= 5
   }
 
-  if (keyIsDown(DOWN_ARROW)){
+  if (keyIsDown(DOWN_ARROW) && y < height){
     y += 5
   }
 
