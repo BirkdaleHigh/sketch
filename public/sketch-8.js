@@ -41,7 +41,7 @@ function draw() {
     y += 5
   }
 
-  var circle = {'x': x, 'y': y}
+  var circle = {'x': x, 'y': y, 'col': function(){ return color(24,93,56) }() }
   if( (last.x !== x) || (last.y !== y) ){
     if(list.length < 40){
       list.push(circle)
@@ -58,8 +58,8 @@ function draw() {
       noStroke()
     }
     // Set the opacity relative to the position in the array
-    pallet.green._array[3] = map(i, 0, a.length, .2, 1)
-    fill(pallet.green)
+    c.col._array[3] = map(i, 0, a.length, .2, 1)
+    fill(c.col)
 
     ellipse(c.x, c.y ,15, 15)
   })
