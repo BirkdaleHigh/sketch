@@ -3,8 +3,7 @@ var app = express()
 var http = require('http').Server(app)
 var os = require('os')
 var handlebars = require('express-handlebars')
-var port  = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000
-var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+var port  = process.env.PORT || 3000
 
 app.use(express.static(__dirname + '/public'))
 
@@ -25,6 +24,6 @@ app.get('/sketch/:id', function (req, res, next) {
   res.render('sketch', {file: req.params.id})
 })
 
-http.listen(port, ip, function () {
+http.listen(port, function () {
   console.log(`listening on ${ os.hostname() } at: ${http.address().port}`)
 })
