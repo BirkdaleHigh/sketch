@@ -8,6 +8,8 @@ function setup() {
   colorMode(HSB, height, 255, 255);  
   noStroke();
   background(100, 400, 52);
+
+  document.getElementById('instructions').textContent = 'Slide the mouse left and right'
 }
 
 function draw() {

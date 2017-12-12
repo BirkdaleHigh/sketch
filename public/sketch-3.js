@@ -7,6 +7,8 @@ var countdown = 70000 // milliseconds to count down.
 
 function setup() {
   canvas = createCanvas(400,400)
+
+  document.getElementById(`instructions`).textContent = 'Programatic values'
 }
 
 function draw() {

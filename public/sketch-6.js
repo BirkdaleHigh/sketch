@@ -11,6 +11,8 @@ function setup() {
   colorMode(HSB, 255, 255, 255);  
   noStroke();
   background(0, 0, 0);
+
+  document.getElementById('instructions').textContent = 'Move the mouse to draw colours, click to stop and start.'
 }
 
 function draw() {

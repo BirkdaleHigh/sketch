@@ -12,7 +12,9 @@ function setup() {
   createCanvas(512, 512);
   colorMode(HSB, 95)
   
-    background(20,90,90)
+  background(20,90,90)
+  
+  document.getElementById('instructions').textContent = 'Use the arrow keys to move the dot.'
 }
 
 function draw() {

@@ -5,6 +5,8 @@ var canvas
 
 function setup() {
   canvas = createCanvas(400,400)
+
+  document.getElementById(`instructions`).textContent = 'Combining shapes and making changes'
 }
 
 var leftEar = 255
