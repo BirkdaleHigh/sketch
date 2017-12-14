@@ -1,16 +1,15 @@
-//title: Sketch 3: Countdown
-console.log('sketch-3')
+//title: Sketch 4: Countdown
+console.log('sketch-4')
 
-var canvas
 var countdown = 15000 // milliseconds to count down.
 var starttime = 0
-// To test, this starts from 70 seconds so whe get to handle the minutes transition.
+// TODO: When counting from over a minute reformat the seconds to show minutes and seconds.
 
 function setup() {
-  canvas = createCanvas(400,400)
+  createCanvas(720,400)
   colorMode(HSL)
 
-  document.getElementById(`instructions`).textContent = 'Count down and change the background colour in the last 10 seconds.'
+  document.getElementById(`instructions`).textContent = 'Count down and change the background colour in the last 10 seconds. Stopwatch version 2'
 }
 
 function draw() {
@@ -23,9 +22,9 @@ function draw() {
     fill(0, 0, 77)
   }
   if (time > -1) {
-    fill(0, 0, 0);
+    fill(0, 0, 100);
     textSize(30);
-    text(time, width / 2 , height / 2)
+    text(time, width / 2 -7 , height / 2 + 15) // Write text, centered on the screen, and offset for the text size.
   }
 }
 function mousePressed() {

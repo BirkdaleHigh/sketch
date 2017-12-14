@@ -12,7 +12,7 @@ function setup() {
   // Colours
   colorMode(HSL) // HSL is easier to use, get them with the browsers colour picker.
   pallet.dark  = color(23,22,27)
-  pallet.dust  = color(0,0,0)
+  pallet.dust  = color(270,10,20)
   pallet.green = color(159,39,55)
 
   createCanvas(512, 512);
@@ -38,7 +38,6 @@ function getSegment(count){
 
 function draw() {
   background(pallet.dust)
-  fill(255, 0, 0);
   col = col + 5
 
   if (col > 360){

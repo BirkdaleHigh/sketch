@@ -1,12 +1,10 @@
 //title: Sketch 1: Countdown
 console.log('sketch-1')
 
-var canvas
-
 function setup() {
-  canvas = createCanvas(400,400)
+  createCanvas(720,400)
 
-  document.getElementById(`instructions`).textContent = 'Drawing a basic shape'
+  document.getElementById(`instructions`).textContent = 'Draw a basic shape'
 }
 
 function draw() {

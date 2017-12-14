@@ -12,13 +12,13 @@ function setup() {
   // Colours
   colorMode(HSL) // HSL is easier to use, get them with the browsers colour picker.
   pallet.dark  = color(23,22,27)
-  pallet.dust  = color(0,0,0)
+  pallet.dust  = color(270,10,20)
   pallet.green = color(159,39,55)
 
   createCanvas(512, 512);
-  
+
   background(pallet.dust)
-  
+
   document.getElementById(`instructions`).textContent = 'Use the arrow keys!'
 }
 
@@ -26,13 +26,12 @@ var last = {'x': 0, 'y': 0}
 
 function draw() {
   background(pallet.dust)
-  fill(255, 0, 0);
   col = col + 5
-  
+
   if (col > 360){
     col = col - 360
   }
-  
+
   if (keyIsDown(LEFT_ARROW) && x > 0){
     x -= 5
   }
@@ -61,7 +60,7 @@ function draw() {
 
   list.forEach(function(c, i, a){
     if(i === (a.length -1)){ // Only paint a boarder around the head of the snake.
-      stroke(108, 102, 54)
+      stroke(0, 0, 0)
     } else {
       noStroke()
     }

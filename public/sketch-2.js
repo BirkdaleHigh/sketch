@@ -1,12 +1,10 @@
 //title: Sketch 2: Countdown
 console.log('sketch-2')
 
-var canvas
-
 function setup() {
-  canvas = createCanvas(400,400)
+  createCanvas(720,400)
 
-  document.getElementById(`instructions`).textContent = 'Combining shapes and making changes'
+  document.getElementById(`instructions`).textContent = 'Click on the left or right side. This is Combining shapes and making changes'
 }
 
 var leftEar = 255

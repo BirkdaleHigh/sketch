@@ -3,18 +3,14 @@ console.log('sketch-7')
 
 var x = 100;
 var y = 100;
-var barWidth = 0.5;
-var barlength = 0.5;
-var earlybar = 0;
-var col = 10
 
 function setup() {
   createCanvas(512, 512);
-  colorMode(HSB, 95)
-  
-  background(20,90,90)
-  
-  document.getElementById('instructions').textContent = 'Use the arrow keys to move the dot.'
+  colorMode(HSL)
+
+  background(58,78,80)
+
+  document.getElementById('instructions').textContent = 'Use the arrow keys to move the dot. c is clear'
 }
 
 function draw() {
@@ -29,13 +25,13 @@ function draw() {
 
   if (keyIsDown(DOWN_ARROW))
     y+=5;
-    
+
   if (keyIsDown(67)){ // C
-    background(20,90,90)
+    background(58,78,80)
   }
-  
+
   console.log(keyCode)
-  
-  fill(255, 0, 0);
+
+  fill(24, 93, 56);
   ellipse(x, y, 50, 50);
 }

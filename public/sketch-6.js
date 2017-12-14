@@ -1,41 +1,29 @@
-//title: Sketch 6: Rainbow edited by Student
+// title: Sketch 6
 console.log('sketch-6')
 
 var barWidth = 0.5;
-var barlength = 0.5;
 var earlybar = 0;
-var col = 10
+var col = 10;
 
 function setup() {
-  createCanvas(972, 540);
-  colorMode(HSB, 255, 255, 255);  
-  noStroke();
+  createCanvas(720, 400);
+  colorMode(HSL);
   background(0, 0, 0);
+  noStroke();
 
-  document.getElementById('instructions').textContent = 'Move the mouse to draw colours, click to stop and start.'
+  document.getElementById('instructions').textContent = 'Click and drag the mouse to paint colours'
 }
 
 function draw() {
-  if (keyIsDown(UP_ARROW)) {
-    fill(255, 100, 0);             //to fill the circle to a a colour based on pos in the Y-axis  
-    ellipse(barX, mouseY, 20, 20);    //barx is on x axis, 0 is bottom on y axis, barwidth is the width of rectangle, height as in y axis max
-  }
-  if (col > 255)
-    col = col - 255
-    var whichBar = mouseX / barWidth;     //works out which bar you`re at
-  if (true) {           //if the bar is not the last pressed then run the below loop
-    col = col + 3
-    console.log(height)
-    var barX = whichBar * barWidth;     //
-    fill(col, 255, 255);             //to fill the bar to a a colour based on pos in the Y-axis  
-    ellipse(barX, mouseY, 20, 20);    //barx is on x axis, 0 is bottom on y axis, barwidth is the width of rectangle, height as in y axis max
-    earlybar = whichBar
-  }
-}
-function mouseReleased() {
-  noLoop();
+  // We're not drawing every frame, so we don't need anything here
 }
 
-function mousePressed()  {
-  loop();
+function mouseDragged() {
+  // This runs only whilst the mouse is pressed AND moved. See reference: Events
+  if (col > 360){ // Check if the color is at the end of the colour wheel to reset the value.
+    col = 0
+  }
+  fill(col, 100, 50);                // Set a colour based on the increasing colour postion around the wheel
+  ellipse(mouseX, mouseY, 20, 20);   // Draw a circle around the current mouse location
+  col = col + 3                      // Increment the color by some amount so it's different next time
 }
