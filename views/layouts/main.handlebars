@@ -16,21 +16,26 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      font: 100 14px/21px "segoe UI", sans-serif;
+      font: 100 16px/26px "segoe UI", sans-serif;
       background: #f8f8f8;
     }
     nav a{
-      margin-right: 5px;
-      padding-right: 5px;
+      padding: 10px;
+      padding-left: 8px;
       border-right: 2px solid #ccc;
       text-decoration: none;
     }
+    nav a:last-of-type{
+      border: none
+    }
+    nav a:hover{text-decoration: underline;}
   </style>
 </head>
 
 <body>
   <nav>
     <a href="/">Home</a>
+    <a href="/sketch/2">Sketch</a>
     <a href="http://p5js.org/reference/" target="_blank">Reference</a>
     <a href="http://p5js.org/learn/" target="_blank">Learn</a>
     <a href="http://p5js.org/examples/" target="_blank">Examples</a>
